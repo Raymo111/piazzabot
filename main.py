@@ -64,7 +64,7 @@ try:
 		if len(posts) == 0 or (args.click_all and count == 0):
 			break
 		posts[(count := count - 1) if args.click_all else 0].click()
-		wait_for_load(driver)
+		# wait_for_load(driver)
 		sleep(SLEEP_SECONDS)
 finally:
 	driver.close()
